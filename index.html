@@ -17,6 +17,10 @@
       align-items: center;
       justify-content: center;
       padding: 24px;
+       background:
+        linear-gradient(rgba(8, 12, 30, 0.86), rgba(8, 12, 30, 0.9)),
+        url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80")
+          center/cover no-repeat fixed;
     }
     .app {
       max-width: 900px;
@@ -52,8 +56,8 @@
     }
     .grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-      gap: 18px;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+      gap: 20px;
     }
     .card {
       background: rgba(15, 23, 42, 0.9);
@@ -179,7 +183,7 @@
       border-radius: 14px;
       padding: 10px 12px;
       border: 1px solid #374151;
-      min-height: 120px;
+      min-height: 170px;
       font-size: 0.85rem;
       white-space: pre-wrap;
       overflow-wrap: break-word;
@@ -238,15 +242,16 @@
 </head>
 <body>
   <div class="app">
-    <header>
-      <h1>
-        <span class="logo">✈️</span>
-        TravelAI <span style="font-size: 0.8rem; color:#9ca3af;">(Local Backend)</span>
-      </h1>
-      <div class="subtitle">
-        Get city weather (Open-Meteo) and live places (SerpAPI via Python backend).
-      </div>
-    </header>
+ <header style="text-align:center;">
+  <h1 style="justify-content:center;">
+    <span class="logo">✈️</span>
+    TravelAI
+  </h1>
+  <div class="subtitle">
+    Get city weather (Open-Meteo) and live places (SerpAPI via Python backend).
+  </div>
+</header>
+
 
     <div class="grid">
       <!-- LEFT: Inputs -->
@@ -326,10 +331,7 @@
       </div>
     </div>
 
-    <footer class="footer">
-      <div>Python backend: Flask on <code>http://localhost:5000</code>.</div>
-      <div>Weather: Open-Meteo · Places: SerpAPI via <code>/api/places</code>.</div>
-    </footer>
+
   </div>
 
   <script>
